@@ -11,7 +11,7 @@ export class ResetpasswordpublicComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigateByUrl('/password').then(r => () => console.log(r));
+    this.router.navigate([this.router.url]);
   }
 
 }
