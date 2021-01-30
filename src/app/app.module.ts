@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, MatToolbarModule,
     BrowserAnimationsModule , MatButtonModule,
     MatFormFieldModule, MatInputModule, MatCardModule,
     ReactiveFormsModule

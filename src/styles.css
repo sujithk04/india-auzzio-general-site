@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  background-color: #eee;
+  border: thick;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+  font-family: "Merriweather", serif;
+  line-height: 100%;
+}
 
 .button-label {
   font-family: 'Roboto', sans-serif;
@@ -45,11 +58,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-family: 'Roboto', sans-serif;
 }
 
-
-
 .green-snackbar {
   background: #016617;
 }
 .red-snackbar {
   background: #FF0000;
+}
+.auzzio_logo {
+  max-height: 10vh;
+  margin: .1vw 0px;
+}
+.auzzio_logo_mobile {
+  max-height: 5vw;
+  margin: .5vw 0px;
 }

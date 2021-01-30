@@ -1,0 +1,41 @@
+.brand
+{
+  overflow: hidden;
+  width: 100%;
+  /* grid-column: 1/2;
+  grid-row: 1/2; */
+  display: inline-block;
+  flex: 1 1 ;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: #eee;
+}
+
+.desk-toolbar {
+  width: 100%;
+  opacity: 0.9;
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: auto;
+}
+
+.mobile-toolbar{
+  width: 100%;
+  opacity: 0.9;
+  position: fixed;
+  background-color: #f8f8f8;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding-right: .5vw;
+  padding-left: .5vw;
+  height: auto;
+}
