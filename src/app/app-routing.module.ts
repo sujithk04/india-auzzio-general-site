@@ -5,10 +5,10 @@ import {AppComponent} from './app.component';
 
 
 const routes: Routes = [ {
-  path: 'password',
+  path: 'password/:resetkey',
   component: ResetpasswordpublicComponent,
 },
-  { path: '', redirectTo: '/password', pathMatch: 'full' },
+  { path: '', redirectTo: '/password/:resetkey', pathMatch: 'full' },
   { path: '**', component: AppComponent }
 ];
 

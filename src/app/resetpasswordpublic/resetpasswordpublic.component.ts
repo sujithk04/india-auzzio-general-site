@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {HelperServicesService} from '../services/helper-services.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
@@ -11,7 +11,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class ResetpasswordpublicComponent implements OnInit {
   public isMobilevar: boolean;
   public resetPassWordFG: FormGroup;
-  constructor(private router: Router, private utilityService: HelperServicesService, private resetPasswordFB: FormBuilder) {
+  constructor(private router: Router,
+              private utilityService: HelperServicesService,
+              private actRoute: ActivatedRoute,
+              private resetPasswordFB: FormBuilder) {
     this.isMobilevar =  this.utilityService.isMobile();
   }
 
@@ -26,6 +29,9 @@ export class ResetpasswordpublicComponent implements OnInit {
       newPassword: ['', Validators.required],
       confirmPasword: ['',Validators.required]
     });
+
+    const id = this.actRoute.snapshot.params.resetkey;
+    console.log(id);
   }
 
 }
