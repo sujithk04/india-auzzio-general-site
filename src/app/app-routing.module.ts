@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ResetpasswordpublicComponent} from './resetpasswordpublic/resetpasswordpublic.component';
 import {AppComponent} from './app.component';
+import {EmailverifylinkComponent} from './emailverifylink/emailverifylink.component';
 
 
 const routes: Routes = [ {
-  path: 'password/:resetkey',
+  path: 'reset/password/:resetkey',
   component: ResetpasswordpublicComponent,
 },
   { path: '', redirectTo: '/password/:resetkey', pathMatch: 'full' },

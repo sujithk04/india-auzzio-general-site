@@ -18,7 +18,6 @@ import { EmailverifylinkComponent } from './emailverifylink/emailverifylink.comp
   declarations: [
     AppComponent,
     ResetpasswordpublicComponent,
-    EmailverifylinkComponent
   ],
   imports: [
     BrowserModule,
