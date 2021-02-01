@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "india-auzzio-general-site"
+  "defaultProject": "india-auzzio-general-site",
+  "cli": {
+    "analytics": "96fe9db8-bec6-4084-b7b7-01e9f08345ec"
+  }
 }

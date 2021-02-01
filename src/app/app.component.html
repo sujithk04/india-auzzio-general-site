@@ -1,7 +1,27 @@
-
+<!-- 
 
 <mat-toolbar color="primary" class="desk-toolbar" style="width: 100%" >
   <img class="auzzio_logo" class="ui-g-2  ui-md-2  ui-lg-2" src="../../../assets/logo/logo.svg" alt="logo" />
   </mat-toolbar>
 <router-outlet></router-outlet>
+ -->
 
+
+ 
+<!--Adding MENUS for desktop site-->
+
+  <div class="ui-g-12 ui-md-12 ui-lg-12" >
+    <mat-toolbar color="primary" class="desk-toolbar" style="width: 100%" [class.mat-elevation-z4]="true" >
+      <img class="auzzio_logo" class="ui-g-2  ui-md-2  ui-lg-2" src="../../../assets/logo/logo.svg" alt="logo" />
+      <a [routerLink]="['/howitworks']" class=" ui-g-1  ui-lg-offset-6 ui-md-offset-5 ui-sm-offset-4 ui-sm-1 ui-md-1 ui-lg-1 howitworks">How it works</a>
+      <a [routerLink]="['/providerlogin']" class="ui-g-1  ui-md-1 ui-lg-1 myListings">MyListings</a>
+      <a [routerLink]="['/mission']" class="ui-g-1  ui-md-1 ui-lg-1 categories">Categories</a>
+      <a [routerLink]="['/user/login']" class="ui-g-1  ui-md-1 ui-lg-1 loginlink">Login</a>
+      <button  mat-raised-button class="ui-g-1  ui-md-1 ui-lg-1 button-style" style="border-radius: 28.5px;"   [routerLink]="['/user/signup']" >
+       <p class="button-label">Sign Up</p>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+
+  
