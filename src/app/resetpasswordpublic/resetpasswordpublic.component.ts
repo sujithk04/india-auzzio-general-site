@@ -28,4 +28,8 @@ export class ResetpasswordpublicComponent implements OnInit {
     });
   }
 
+
+  
+  
+
 }
