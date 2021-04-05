@@ -46,7 +46,6 @@ export class ResetpasswordpublicComponent implements OnInit {
     const emailUid = this.actRoute.snapshot.params.resetkey;
     const emailExpr = this.actRoute.snapshot.params.linkExpiry;
     const newPassword = this.resetPassWordFG.get('newPassword').value;
-    
     this.resetObject.email_uuid = emailUid;
     this.resetObject.new_password = newPassword;
     this.resetObject.email_expiry = emailExpr;
