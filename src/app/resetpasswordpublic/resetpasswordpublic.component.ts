@@ -38,11 +38,12 @@ export class ResetpasswordpublicComponent implements OnInit {
       newPassword: ['', Validators.required],
       confirmPasword: ['',Validators.required]
     });
-
+    console.log(this.actRoute.snapshot.params);
   }
 
   // method to invoke the reset password
   public invokeResetPasswordEmail() {
+
     const emailUid = this.actRoute.snapshot.params.resetkey;
     const emailExpr = this.actRoute.snapshot.params.linkExpiry;
     const newPassword = this.resetPassWordFG.get('newPassword').value;

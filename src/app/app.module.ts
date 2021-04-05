@@ -12,7 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpRequestInterceptor } from './HttpInterceptor/HttpRequestInterceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppRoutingModule, MatToolbarModule,
     BrowserAnimationsModule, MatButtonModule,
     MatFormFieldModule, MatInputModule, MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, HttpClientModule
   ],
-  providers: [HelperServicesService, DeviceDetectorService, FormBuilder],
+  providers: [HelperServicesService, DeviceDetectorService, 
+     {
+    provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

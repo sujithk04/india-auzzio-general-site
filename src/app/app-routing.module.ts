@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [{
-  path: 'reset/password/:resetkey/:linkExpiry',
+  path: 'password/:resetkey/:linkExpiry',
   component: ResetpasswordpublicComponent,
 },
 { path: '', redirectTo: '/password/:resetkey/:linkExpiry', pathMatch: 'full' },
