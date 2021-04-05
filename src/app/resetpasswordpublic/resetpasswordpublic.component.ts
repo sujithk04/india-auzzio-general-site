@@ -25,7 +25,6 @@ export class ResetpasswordpublicComponent implements OnInit {
     // build the form
 
     this.resetPassWordFG = this.resetPasswordFB.group({
-      oldPassword: ['', Validators.required],
       newPassword: ['', Validators.required],
       confirmPasword: ['',Validators.required]
     });
