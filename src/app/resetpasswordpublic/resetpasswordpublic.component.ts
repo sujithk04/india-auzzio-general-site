@@ -39,16 +39,18 @@ export class ResetpasswordpublicComponent implements OnInit {
       confirmPasword: ['',Validators.required]
     });
 
-    const id = this.actRoute.snapshot.params.resetkey;
-    console.log(id);
   }
 
   // method to invoke the reset password
   public invokeResetPasswordEmail() {
-    this.resetObject.email_uuid = "";
-    this.resetObject.new_password = "";
-    this.resetObject.email_expiry = 12;
-
+    const emailUid = this.actRoute.snapshot.params.resetkey;
+    const emailExpr = this.actRoute.snapshot.params.linkExpiry;
+    const newPassword = this.resetPassWordFG.get('newPassword').value;
+    
+    this.resetObject.email_uuid = emailUid;
+    this.resetObject.new_password = newPassword;
+    this.resetObject.email_expiry = emailExpr;
+    
     this.resetSubscription = this.resetService.resetPasswordEmail(this.resetObject).subscribe(
       (response) => {
         console.log(response);
