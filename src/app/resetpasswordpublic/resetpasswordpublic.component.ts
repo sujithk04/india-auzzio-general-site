@@ -49,7 +49,7 @@ export class ResetpasswordpublicComponent implements OnInit {
     const newPassword = this.resetPassWordFG.get('newPassword').value;
     this.resetObject.email_uuid = emailUid;
     this.resetObject.new_password = newPassword;
-    this.resetObject.email_expiry = emailExpr;
+    this.resetObject.email_expiry = Number(emailExpr);
     
     this.resetSubscription = this.resetService.resetPasswordEmail(this.resetObject).subscribe(
       (response) => {
