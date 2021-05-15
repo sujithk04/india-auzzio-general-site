@@ -1,6 +1,7 @@
-import { Ipassreset } from './../model/passwordreset';
+import { Ipassreset1 } from './../model/passwordreset';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class PasswordresetService {
 
 
 
-  public resetPasswordEmail(reset: Ipassreset) {
+  public resetPasswordPemail(reset: Ipassreset1) {
    // Service method to call a reset password  API
  // Generate a header object
     let headers = new HttpHeaders();
@@ -27,3 +28,7 @@ export class PasswordresetService {
  }
 
 } 
+
+
+
+

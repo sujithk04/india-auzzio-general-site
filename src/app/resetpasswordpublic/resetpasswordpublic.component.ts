@@ -1,4 +1,4 @@
-import { Ipassreset } from './../model/passwordreset';
+import { Ipassreset1 } from './../model/passwordreset';
 import { PasswordresetService } from './../services/passwordreset.service';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -15,7 +15,7 @@ export class ResetpasswordpublicComponent implements OnInit {
   public isMobilevar: boolean;
   public resetPassWordFG: FormGroup;
   resetSubscription: Subscription;
-  resetObject: Ipassreset = {
+  resetObject: Ipassreset1 = {
     new_password: '',
     email_uuid: '',
     email_expiry: 0
@@ -42,7 +42,7 @@ export class ResetpasswordpublicComponent implements OnInit {
   }
 
   // method to invoke the reset password
-  public invokeResetPasswordEmail() {
+  public invokeResetPasswordEmail1() {
     const emailUid = this.actRoute.snapshot.params.resetkey;
     const emailExpr = this.actRoute.snapshot.params.linkExpiry;
     const newPassword = this.resetPassWordFG.get('newPassword').value;
@@ -50,7 +50,7 @@ export class ResetpasswordpublicComponent implements OnInit {
     this.resetObject.new_password = newPassword;
     this.resetObject.email_expiry = Number(emailExpr);
     
-    this.resetSubscription = this.resetService.resetPasswordEmail(this.resetObject).subscribe(
+    this.resetSubscription = this.resetService.resetPasswordPemail(this.resetObject).subscribe(
       (response) => {
         console.log(response);
       },
