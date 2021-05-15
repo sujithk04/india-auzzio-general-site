@@ -21,7 +21,7 @@ export class PasswordresetService {
     headers = headers.append("AuthRequired", "no");
      // rest of the headers will be appended globally by http interceptors
      // Define a url for api end point
-    const passResetURL = "https://user.auzzio.com/user/email/forgot/password/reset";
+    const passResetURL = "https://provider.auzzio.com/forgot/email/update";
     // return the http request
     return this.http.post(passResetURL, reset, { headers, observe: 'response' });
  }
