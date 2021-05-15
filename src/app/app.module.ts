@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpRequestInterceptor } from './HttpInterceptor/HttpRequestInterceptor.interceptor';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HttpRequestInterceptor } from './HttpInterceptor/HttpRequestInterceptor
     AppRoutingModule, MatToolbarModule,
     BrowserAnimationsModule, MatButtonModule,
     MatFormFieldModule, MatInputModule, MatCardModule,
-    ReactiveFormsModule, HttpClientModule
+    ReactiveFormsModule, HttpClientModule,MatSnackBarModule
   ],
   providers: [HelperServicesService, DeviceDetectorService, 
      {

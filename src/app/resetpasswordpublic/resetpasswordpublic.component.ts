@@ -5,14 +5,18 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HelperServicesService} from '../services/helper-services.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-resetpasswordpublic',
-  templateUrl: './resetpasswordpublic.component.html',
+  templateUrl:'./resetpasswordpublic.component.html',
   styleUrls: ['./resetpasswordpublic.component.css']
 })
 export class ResetpasswordpublicComponent implements OnInit {
   public isMobilevar: boolean;
+ public isDeskTopvar: boolean;
+public  isTabletvar: boolean;
   public resetPassWordFG: FormGroup;
   resetSubscription: Subscription;
   resetObject: Ipassreset1 = {
@@ -20,18 +24,22 @@ export class ResetpasswordpublicComponent implements OnInit {
     email_uuid: '',
     email_expiry: 0
   }
+  
   constructor(private router: Router,
-              private utilityService: HelperServicesService,
+              private utilityService: DeviceDetectorService,
               private actRoute: ActivatedRoute,
               private resetService:  PasswordresetService,
-              private resetPasswordFB: FormBuilder) {
+              private resetPasswordFB: FormBuilder,
+              private snackBar: MatSnackBar, ) {
     this.isMobilevar =  this.utilityService.isMobile();
+    this.isDeskTopvar= this.utilityService.isDesktop();
+    this.isTabletvar= this.utilityService.isTablet();
   }
 
   ngOnInit(): void {
     // go to same page on reload
     this.router.navigate([this.router.url]);
-
+    
     // build the form
 
     this.resetPassWordFG = this.resetPasswordFB.group({
